@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Aiami_Garcia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +22,64 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thinkColorful03" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-Cv-08q">
+                                <rect key="frame" x="0.0" y="100" width="400" height="400"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="l0k-mj-Jh2" appends="YES" id="ahv-sA-5Wz"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVn-mE-puC">
+                                <rect key="frame" x="16" y="49" width="568" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="cW4-QD-qOI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-fs-JMW">
+                                <rect key="frame" x="16" y="20" width="568" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1Ao-68-TBv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CfG-fs-JMW" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="8Ks-lf-NWf"/>
+                            <constraint firstItem="CfG-fs-JMW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="GsS-hc-wRT"/>
+                            <constraint firstItem="CfG-fs-JMW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="OqV-fr-4c4"/>
+                            <constraint firstItem="BVn-mE-puC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="XHx-Hz-hoa"/>
+                            <constraint firstItem="BVn-mE-puC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="29" id="YNy-0f-g5b"/>
+                            <constraint firstItem="BVn-mE-puC" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="uYG-9r-etm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageThinkCreatively" destination="5nY-Cv-08q" id="TAB-s6-aYS"/>
+                        <outlet property="pinchRecognizer" destination="l0k-mj-Jh2" id="sK5-Ku-Ta7"/>
+                        <outlet property="tapRecognizer" destination="0SC-cc-lAV" id="oWv-q9-qe5"/>
+                        <outlet property="textView" destination="CfG-fs-JMW" id="Luz-RC-pI9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="l0k-mj-Jh2">
+                    <connections>
+                        <action selector="scaleImage:" destination="vXZ-lx-hvc" id="MhH-x8-EsK"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="0SC-cc-lAV">
+                    <connections>
+                        <action selector="tapDetected:" destination="vXZ-lx-hvc" id="HKe-GL-UwH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="thinkColorful03" width="1313" height="1313"/>
+    </resources>
 </document>

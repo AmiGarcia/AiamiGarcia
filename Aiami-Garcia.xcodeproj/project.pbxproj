@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40A3DC371AE82C530006B90F /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 40A3DC361AE82BFA0006B90F /* Montserrat-Regular.otf */; };
 		40FC9C0C1AE17829000E90DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC9C0B1AE17829000E90DB /* AppDelegate.swift */; };
 		40FC9C0E1AE17829000E90DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC9C0D1AE17829000E90DB /* ViewController.swift */; };
 		40FC9C111AE17829000E90DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40FC9C0F1AE17829000E90DB /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40A3DC361AE82BFA0006B90F /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		40FC9C061AE17829000E90DB /* Aiami-Garcia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aiami-Garcia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FC9C0A1AE17829000E90DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40FC9C0B1AE17829000E90DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40A3DC351AE82BD30006B90F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				40A3DC361AE82BFA0006B90F /* Montserrat-Regular.otf */,
+			);
+			name = Fonts;
+			path = "Aiami-GarciaTests";
+			sourceTree = SOURCE_ROOT;
+		};
 		40FC9BFD1AE17829000E90DB = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +101,7 @@
 		40FC9C091AE17829000E90DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				40A3DC351AE82BD30006B90F /* Fonts */,
 				40FC9C0A1AE17829000E90DB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A3DC371AE82C530006B90F /* Montserrat-Regular.otf in Resources */,
 				40FC9C111AE17829000E90DB /* Main.storyboard in Resources */,
 				40FC9C161AE17829000E90DB /* LaunchScreen.xib in Resources */,
 				40FC9C131AE17829000E90DB /* Images.xcassets in Resources */,
@@ -409,6 +422,7 @@
 				40FC9C271AE1782A000E90DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40FC9C281AE1782A000E90DB /* Build configuration list for PBXNativeTarget "Aiami-GarciaTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +431,7 @@
 				40FC9C2A1AE1782A000E90DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
